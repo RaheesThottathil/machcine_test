@@ -2,7 +2,7 @@
 git clone https://github.com/RaheesThottathil/machcine_test.git
 
 # Go into project folder
-cd omnific-test
+cd mechine_test
 
 # Install dependencies
 composer install
