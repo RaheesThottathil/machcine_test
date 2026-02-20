@@ -15,28 +15,8 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        User::updateOrCreate([
-            'email' => 'admin@example.com'
-        ], [
-            'name' => 'Admin User',
-            'password' => bcrypt('password'),
-            'role' => 'admin',
-        ]);
-
-        User::updateOrCreate([
-            'email' => 'staff@example.com'
-        ], [
-            'name' => 'Staff User',
-            'password' => bcrypt('password'),
-            'role' => 'staff',
-        ]);
-
-        User::updateOrCreate([
-            'email' => 'client@example.com'
-        ], [
-            'name' => 'Client User',
-            'password' => bcrypt('password'),
-            'role' => 'client',
+        $this->call([
+            UserSeeder::class ,
         ]);
     }
 }

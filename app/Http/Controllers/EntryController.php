@@ -33,6 +33,7 @@ class EntryController extends Controller
                 ->addColumn('image_url', function ($entry) {
                 return $entry->image ? asset('storage/' . $entry->image) : 'https://ui-avatars.com/api/?name=' . urlencode($entry->name) . '&background=random';
             })
+                ->with('staff_members', User::where('role', 'staff')->get())
                 ->make(true);
         }
 
